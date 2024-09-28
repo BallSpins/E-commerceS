@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tocart {
+    border: none;
+    color: #007bff;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #10889d;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    margin: 0 20px;
+}
+.search-bar input:focus{
+    outline: none;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #eaeaea;
+    border-radius: 4px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.dbl {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-links button    {
+    margin-right: 20px;
+}
+.navbar-links .daftar{
+    color: white;
+}
+.masuk{
+    color: #007bff;
+    border: 1px solid #10889d;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.daftar {
+    background-color: #10889d;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.logout {
+    margin-right: 20px;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 4px;
+    background-color: #b00b1e;
+    border: 1px solid #10889d;
+    border-radius: 4px;
+}
+
+#kategori{
+    color: black;
+    text-decoration: none;
+}
+
+.hal1{
+    padding-top: 100px;
+}
+
+.card {
+    height: 350px; /* Atur tinggi yang diinginkan */
+}
+.card-img-top {
+    height: 150px; /* Atur tinggi gambar jika perlu */
+    object-fit: cover; /* Menjaga proporsi gambar */
+}

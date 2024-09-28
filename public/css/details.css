@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#app {
+    display: flex;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+}
+.tombol {
+    margin: 1rem;
+    float: left;
+    width: 5rem;
+    height: 2rem;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: .2rem;
+    border: none;
+}
+.back .fa-arrow-left {
+    width: 1rem;
+}
+.right{
+    padding: 20px;
+    display: flex;
+    margin-right: 0px;
+
+}
+.right .card{
+    display: flex;
+    /* background-color: aqua; */
+    width: 300px;
+    border: 1px solid rgb(148, 148, 148);
+    align-items: center;
+    justify-content: center;
+}
+.right .card img{
+    width: 80%;
+    height: 70%;
+}
+
+.left{
+    gap: 2px;
+    width: 500px;
+    margin: 20px;
+    margin-left: 0px;
+    padding: 10px;
+    border: 1px solid rgb(148, 148, 148);
+    display: block;
+    border-radius: 10px;
+}
+
+.left .dua .detail ul {
+    list-style: none;
+    padding: 0;
+    color: rgb(113, 113, 113);
+}
+.terbang .kotak button{
+  background-color: #ffffff;
+  /* border: 0px solid #ccc;ddddddddddddddddddddddddddddddddddd */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.terbang .kotak{
+    border: 1px solid black;
+    width: 100%
+}

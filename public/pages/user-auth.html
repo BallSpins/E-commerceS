@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-auth</title>
+    <link rel="stylesheet" href="../css/user-auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form action="" id="authForm">
+        <div class="outer-wrap">
+            <div class="left-wrap">
+                <h3>Login</h3>
+        
+                <input type="text" id="username" placeholder="Name *" required>
+                <input type="password" id="password" placeholder="Password * " required>
+                <p id="check"><input type="checkbox"> Remember me</p>
+            </div>
+            <div class="right-wrap">
+                <button type="submit" class="signup" id="login">Login</button>
+                <button type="button" class="login"> <i class="fa-brands fa-google"></i> Login with Google</button>
+                <p>Found a bugs? <a href="">Report it here</a></p>
+                <p>Didn't have any account? <a href="" id="registerLink">Register here</a></p>
+            </div>
+        </div>
+    </form>
+     <script type="module" src="../js/auth/auth.js"></script>
+</body>
+</html>
