@@ -23,7 +23,7 @@ function switchToRegister() {
             <input type="email" id="registeremail" placeholder="Email *" required>
             <input type="password" id="registerpassword" placeholder="Password *" required>
             <input type="password" id="registerconfirmpassword" placeholder="Re-Type Password *" required>
-            <p id="check"><input type="checkbox"> I agree with the <a href="#" id="hyper">terms and conditions</a></p>
+            <p id="check"><input type="checkbox" required> I agree with the <a href="#" id="hyper">terms and conditions</a></p>
         `
 
         document.querySelector('.right-wrap').innerHTML = `

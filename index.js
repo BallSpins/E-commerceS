@@ -2,11 +2,13 @@ const express = require('express')
 const axios = require('axios')
 const path = require('path')
 const bcrypt = require('bcrypt')
+const cookieParser = require('cookie-parser')
 require('dotenv').config()
 const app = express()
 const port = process.env.PORT
 
 app.use(express.json())
+app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 const apiUrl = process.env.API_URL
@@ -27,6 +29,9 @@ app.get('/product/:id', async (req, res) => {
 })
 
 app.get('/cart', (req, res) => {
+    if(!req.cookies.username) {
+        return res.redirect('/')
+    }
     res.sendFile(path.join(__dirname, 'public', 'pages', 'cart.html'))
 })
 
@@ -379,6 +384,7 @@ app.post('/auth/login', async (req, res) => {
         const isMatch = await bcrypt.compare(password, user.password)
 
         if(isMatch) {
+            res.cookie('username', username, { httpOnly: true, secure: true })
             return res.json({ ok: true, message: 'Login success', user: user })
         } else {
             return res.status(401).json({ ok: false, message: 'Incorrect password' })
@@ -387,6 +393,11 @@ app.post('/auth/login', async (req, res) => {
         console.error('Error during login: ', error)
         return res.status(500).json({ ok: false, message: 'Error during login' })
     }
+})
+
+app.post('/auth/logout', (req, res) => {
+    res.clearCookie('username')
+    res.redirect('/')
 })
 
 app.listen(port, () => {

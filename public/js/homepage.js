@@ -63,8 +63,14 @@ Vue.createApp({
 document.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.querySelector('.logout')
     if(logoutBtn) {
-        logoutBtn.addEventListener('click', () => {
+        logoutBtn.addEventListener('click', async () => {
             localStorage.removeItem('username')
+            await fetch('/auth/logout', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json' 
+                }
+            })
             alert('Logged out succesfully')
             window.location.reload()
         })
